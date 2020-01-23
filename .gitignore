@@ -1,3 +1,5 @@
 
 .DS_Store
 launchipython.command
+.ipynb_checkpoints/1_instacart_model_exploration-checkpoint.ipynb
+.ipynb_checkpoints/2_REST_API-checkpoint.ipynb
