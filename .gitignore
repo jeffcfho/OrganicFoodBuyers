@@ -6,3 +6,6 @@ launchipython.command
 .ipynb_checkpoints/0_instacart_eda-checkpoint.ipynb
 .ipynb_checkpoints/2_Streamlit_app-checkpoint.ipynb
 .ipynb_checkpoints/1_collaborative_filtering-checkpoint.ipynb
+.ipynb_checkpoints/2_collaborative_filter_recommends-checkpoint.ipynb
+.ipynb_checkpoints/2_model_benchmark-checkpoint.ipynb
+.ipynb_checkpoints/3_final_logistic_regression_model-checkpoint.ipynb
