@@ -1,8 +1,8 @@
 import streamlit as st
-import base64
 import pickle
 import pandas as pd
 import numpy as np
+import plotly.express as px
 
 st.sidebar.title('Organic Targets')
 st.sidebar.subheader('A tool for targeting organic produce buyers')
@@ -49,14 +49,22 @@ elif view==view_names[1]:
 	st.subheader(view_names[1])
 	min_predicted_prob = st.slider("Show users with probabilities greater than",min_value=0.5,max_value=0.99,step=0.01,value=0.9)
 	user_emails = user_list.loc[(user_list['predicted_prob']>min_predicted_prob),'user_emails']
+
 	st.write(f"There are {len(user_emails)} users to target. A random sample of 20 is shown below:")
 	st.code(',\n'.join(user_emails.sample(20).values)+'...')
 # About page
 elif view==view_names[2]:
 	st.subheader(view_names[2])
 	st.write('Organic food is the fastest growing category in retail grocery today, but still represents only 6% of the total market share in the U.S. To retain and continue to grow the market, organic trade associations provide coupons and other advertising to customers to incentivize purchase.')
-	st.write('Organic Targets is an API that identifies customers who are likely to buy organic produce in their next grocery purchase based on their past shopping history.')
-	st.write('Compared to traditional methods such as marketing and demographics surveys, this allows for more focused targeting based on actual past purchases.')
+	st.write('Organic Targets is a web app built upon an API that identifies customers who are likely to buy organic produce in their next grocery purchase based on their past shopping history. Compared to traditional methods such as marketing and demographics surveys, this allows for more focused targeting based on actual past purchases.')
+
+	#Show histogram of probabilities
+	f = px.histogram(user_list, x="predicted_prob", nbins=20, title="User distribution",
+					 color_discrete_sequence=['green'])
+	f.update_xaxes(title="Probability of next organic purchase")
+	f.update_yaxes(title="Number of users")
+	st.plotly_chart(f)
+
 	st.write("Organic Targets blends results from collaborative filtering and logistic regression models to provide both a likelihood of purchase plus specific items to recommend.")
 
 
