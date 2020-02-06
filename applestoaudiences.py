@@ -5,7 +5,7 @@ import numpy as np
 import plotly.express as px
 
 st.sidebar.markdown("""
-	# <span style="color:green">Apples to Audiences</span>
+	# <span style="color:green">Apples to Audiences:green_apple::family:</span>
 	""",unsafe_allow_html=True)
 st.sidebar.subheader('A tool for targeting organic produce buyers')
 
@@ -87,10 +87,10 @@ elif view==view_names[2]:
 elif view==view_names[3]:
 	st.markdown(f"""
 		## {view_names[3]}
-		Organic food is the fastest growing category in retail grocery today, but still represents only 6% of the total market share in the U.S. To retain and continue to grow the market, organic trade associations provide coupons and other advertising to customers to incentivize purchase.
+		Organic food is the <span style="font-weight:bold">fastest growing category in retail grocery</span> today, but still represents <span style="color:green;font-weight:bold">just 6% of the total market share</span> in the U.S. To retain and continue to grow the market, <a href="https://maccabee.com/case_study/building-awareness-sales-for-organic-food-products/" target="_blank">organic trade associations provide coupons and other advertising</a> to customers to incentivize purchases.
 
-		Apples to Audiences is a web app built upon an API that identifies customers who are likely to buy organic produce in their next grocery purchase based on their past shopping history. Compared to traditional methods such as marketing and demographics surveys, this allows for more focused targeting based on actual past purchases.
-		""")
+		Apples to Audiences is a web app built upon an API that <span style="font-weight:bold">identifies customers who are likely to buy organic produce next and recommends items for them</span>, based on their past shopping history. The model blend results from collaborative filtering and logistic regression models to provide both a likelihood of purchase plus specific items to recommend. 
+		""",unsafe_allow_html=True)
 	#Show histogram of probabilities
 	f = px.histogram(user_list, x="predicted_prob", nbins=20, title="User distribution",
 					 color_discrete_sequence=['green'])
@@ -98,7 +98,11 @@ elif view==view_names[3]:
 	f.update_yaxes(title="Number of users")
 	st.plotly_chart(f)
 
-	st.markdown("Apples to Audiences blends results from collaborative filtering and logistic regression models to provide both a likelihood of purchase plus specific items to recommend.")
+	st.markdown("""
+		Compared to traditional marketing and demographics surveys, this allows for more focused targeting based on actual past purchases. More focused targeting will <span style="color:green;font-weight:bold">increase lift in the percentage of purchases with organic items</span>.
+
+		The data used to train the model come from 3.4 million orders made by 200k users made public by <a href ="https://www.instacart.com/datasets/grocery-shopping-2017" target="_blank">Instacart</a>.
+		""",unsafe_allow_html=True)
 
 
 
