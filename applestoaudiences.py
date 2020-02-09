@@ -31,13 +31,13 @@ if view==view_names[0]:
 	#Sidebar elements
 	if st.sidebar.checkbox('Show only users who have not bought organic produce before'):
 		user_list_subset = user_list.loc[~user_list['any_hist_organic_produce']]
-		max_predicted_prob = st.sidebar.slider("Show users with probabilities less than",min_value=0.1,max_value=1.0,step=0.01,value=1.00)
+		max_predicted_prob = st.sidebar.slider("Show users with probabilities less than",min_value=0.15,max_value=1.0,step=0.01,value=1.00)
 		option = st.sidebar.selectbox(
 		    'Select a user to see what products to recommend',
 		     user_list_subset.loc[(user_list_subset['predicted_prob']<max_predicted_prob),'user_dropdown'].head(20).values)
 	else:
 		user_list_subset = user_list.loc[user_list['any_hist_organic_produce']]
-		max_predicted_prob = st.sidebar.slider("Show users with probabilities less than",min_value=0.1,max_value=1.0,step=0.01,value=1.00)
+		max_predicted_prob = st.sidebar.slider("Show users with probabilities less than",min_value=0.15,max_value=1.0,step=0.01,value=1.00)
 		option = st.sidebar.selectbox(
 		    'Select a user to see what products to recommend',
 		     user_list_subset.loc[(user_list_subset['predicted_prob']<max_predicted_prob),'user_dropdown'].head(20).values)
@@ -50,7 +50,7 @@ if view==view_names[0]:
 	#Main page elements
 	user_name = option[:-9] # Show about user
 	user_prob = user_one['predicted_prob'].values[0]
-	if (user_one['any_organic_produce_prev'].values[0]):
+	if (user_one['any_hist_organic_produce'].values[0]):
 		bought_produce = 'bought'
 		recom = 'recommending <span style="color:red">new items</span> could grow sales'
 	else:
