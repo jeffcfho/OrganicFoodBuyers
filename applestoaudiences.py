@@ -11,10 +11,15 @@ st.sidebar.subheader('A tool for targeting organic produce buyers')
 
 # import data (for this demo, the data lives locally, but in a more 
 #   secure application it would be retrieved from an external source)
-user_list = pd.read_csv('modeling_dfs/final_users_50k.csv')
-rec_list = pd.read_csv('top20_products_recom_purchasedbefore.csv')
-prod_list = pd.read_csv('top200_products.csv')
-prod_list = prod_list.loc[prod_list['organic']==1]
+@st.cache
+def load_data():
+	u_list = pd.read_csv('modeling_dfs/final_users_50k.csv')
+	r_list = pd.read_csv('top20_products_recom_purchasedbefore.csv')
+	p_list = pd.read_csv('top200_products.csv')
+	p_list = p_list.loc[p_list['organic']==1]
+	return u_list,r_list,p_list
+
+user_list,rec_list,prod_list = load_data()
 
 # Function for printing and formatting emails:
 def print_m_emails(emails_to_print,m):
