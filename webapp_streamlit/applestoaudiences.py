@@ -13,9 +13,9 @@ st.sidebar.subheader('A tool for targeting organic produce buyers')
 #   secure application it would be retrieved from an external source)
 @st.cache
 def load_data():
-	u_list = pd.read_csv('modeling_dfs/final_users_50k.csv')
-	r_list = pd.read_csv('top20_products_recom_purchasedbefore.csv')
-	p_list = pd.read_csv('top200_products.csv')
+	u_list = pd.read_csv('../modeling_dfs/final_users_50k.csv')
+	r_list = pd.read_csv('../notebooks/top20_products_recom_purchasedbefore.csv')
+	p_list = pd.read_csv('../notebooks/top200_products.csv')
 	p_list = p_list.loc[p_list['organic']==1]
 	return u_list,r_list,p_list
 
