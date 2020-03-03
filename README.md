@@ -1,5 +1,7 @@
 # Apples to Audiences: A tool for targeting organic produce buyers
 
+This is the model development and streamlit app deployment for the [Insight Data Science](https://www.insightdatascience.com/) Project [Apples to Audiences](slides/ApplesToAudiences.pdf).
+
 ## Motivation 
 Organic food is the fastest-growing category in retail grocery today, but still represents just 6% of the total market share in the U.S. To grow the market, organic trade associations provide coupons and other advertising to incentivize purchases, but currently such promotions are not targeted to individual consumers. 
 
@@ -20,6 +22,8 @@ The model behind Apples to Audiences identifies 10% new likely buyers of organic
 3. Scikit-learn
 4. Streamlit
 5. EC2
+
+![Pipeline](images/Pipeline.png)
 
 ## Notes
 
