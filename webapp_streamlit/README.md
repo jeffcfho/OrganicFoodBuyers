@@ -1,5 +1,15 @@
 # Streamlit App
 
+## Instructions to run
+
+```bash
+pip install streamlit
+streamlit run applestoaudiences.py
+```
+See [Streamlit docs](https://docs.streamlit.io/) for more information.
+
+## About the app
+
 The [app](http://applestoaudiences.today) has 4 pages: 
 
 1. Target Individual Users

@@ -11,11 +11,34 @@ Apples to Audiences is a tool that identifies users who are likely to buy organi
 
 The model behind Apples to Audiences identifies 10% new likely buyers of organic food and reduces spam to unlikely buyers by 40% compared to not targeting. More focused targeting will increase lift in the percentage of purchases with organic items.
 
-## Data sources
+## Table of Contents
 
-1. [Instacart order data (3.4 million orders made by 200k users)](https://www.instacart.com/datasets/grocery-shopping-2017)
+- [OrganicFoodBuyers](OrganicFoodBuyers/README.md)
+	- Contains standalone code for the final model development pipeline
+- [notebooks](notebooks/README.md)
+	- Contains jupyter notebooks documenting different experimental pipelines for the project.
+- [webapp_streamlit](webapp_streamlit/README.md)
+	- Contains the streamlit front-end. See [Running Streamlit on EC2](#running-streamlit-on-ec2) for instructions for deploying on AWS.
 
-## Tech stack
+## Instructions to run
+
+Clone the repo:
+```bash
+git clone https://github.com/jeffcfho/OrganicFoodBuyers.git
+```
+
+Use either of the requirements files to install the necessary packages. Both have all the packages required for reproducibility but some packages are superfluous that have not yet been removed from the experimentation stage (see Issue #3).
+```bash
+conda create --name <env> --file conda_requirements.txt
+```
+OR
+```bash
+pip install -r pip_requirements.txt
+```
+
+
+
+## Tech stack and data sources
 
 1. Pandas
 2. LightFM
@@ -24,6 +47,8 @@ The model behind Apples to Audiences identifies 10% new likely buyers of organic
 5. EC2
 
 ![Pipeline](images/Pipeline.png)
+
+Data: [Instacart order data (3.4 million orders made by 200k users)](https://www.instacart.com/datasets/grocery-shopping-2017)
 
 ## Notes
 

@@ -1,6 +1,6 @@
 # Code overview
 
-This folder contains the development pipeline for the project. Dataframes are passed between notebooks through the exporting of dataframes as csv files and the saving of models as pickle files. For modular code that stem from these notebooks, see the `code_modules/` folder.
+This folder contains the development pipeline for the project. Dataframes are passed between notebooks through the exporting of dataframes as csv files and the saving of models as pickle files. For modular code that stem from these notebooks, see the `OrganicFoodBuyers/` folder.
 
 ## Notebook themes
 
