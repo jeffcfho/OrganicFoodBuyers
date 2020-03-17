@@ -36,7 +36,10 @@ OR
 pip install -r pip_requirements.txt
 ```
 
-
+To run simple unit tests, run in the main repo folder.
+```
+pytest
+```
 
 ## Tech stack and data sources
 

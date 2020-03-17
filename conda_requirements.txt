@@ -18,7 +18,7 @@ botocore=1.14.9=pypi_0
 branca=0.3.1=py_0
 bz2file=0.98=py37_1
 bzip2=1.0.8=h1de35cc_0
-ca-certificates=2019.11.28=hecc5488_0
+ca-certificates=2020.1.1=0
 cairo=1.14.12=hc4e6be7_4
 certifi=2019.11.28=py37_0
 cffi=1.13.2=py37h33e799b_0
@@ -126,7 +126,8 @@ numpy=1.17.4=py37h890c691_0
 numpy-base=1.17.4=py37h6575580_0
 olefile=0.46=py_0
 openjpeg=2.3.0=hb95cd4c_1
-openssl=1.1.1d=h0b31af3_0
+openssl=1.1.1e=h1de35cc_0
+packaging=20.3=py_0
 pandas=0.25.3=py37h0a44026_0
 pandoc=2.2.3.2=0
 pandocfilters=1.4.2=py37_1
@@ -142,6 +143,7 @@ pip=19.3.1=py37_0
 pixman=0.38.0=h1de35cc_0
 plotly=4.5.0=py_0
 plotly_express=0.4.1=py_0
+pluggy=0.13.1=py37_0
 poppler=0.65.0=ha097c24_1
 poppler-data=0.4.9=0
 postgresql=11.2=h051b688_0
@@ -150,6 +152,7 @@ prometheus_client=0.7.1=py_0
 prompt_toolkit=3.0.2=py_0
 protobuf=3.11.2=pypi_0
 ptyprocess=0.6.0=py37_0
+py=1.8.1=py_0
 pycparser=2.19=py37_1
 pydeck=0.2.0=pypi_0
 pydotplus=2.0.2=pyhd1c1de3_3
@@ -162,6 +165,7 @@ pyparsing=2.4.6=py_0
 pyproj=2.4.1=py37h1526c70_0
 pyrsistent=0.15.6=py37h1de35cc_0
 pysocks=1.7.1=py37_0
+pytest=5.4.1=py37_0
 python=3.7.6=h359304d_2
 python-dateutil=2.8.0=pypi_0
 pytz=2019.3=py_0
